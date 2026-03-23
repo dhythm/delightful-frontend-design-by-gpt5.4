@@ -5,7 +5,18 @@ Source analyzed for this skill:
 - OpenAI Developers blog, "Designing delightful frontends with GPT-5.4", published March 20, 2026
 - https://developers.openai.com/blog/designing-delightful-frontends-with-gpt-5-4
 
-Use this reference when the task needs more detailed design rules than the main `SKILL.md`.
+Use this reference after `frontend-skill`, when you need article-specific nuance rather than the general frontend rules already covered there.
+
+## Relationship To `frontend-skill`
+
+`frontend-skill` should remain the primary execution guide.
+
+This file exists for the deltas:
+
+- how to frame the task before implementation
+- how to distinguish landing pages from app surfaces
+- what failure modes the OpenAI article especially warns about
+- what to verify after the first draft
 
 ## Quickstart Principles
 
