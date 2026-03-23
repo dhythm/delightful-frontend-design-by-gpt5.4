@@ -1,0 +1,4 @@
+interface:
+  display_name: "Delightful Frontend Design"
+  short_description: "Polished frontend art direction and UI guidance"
+  default_prompt: "Use $delightful-frontend-design to design and build a polished, distinctive frontend with strong hierarchy and restrained motion."
