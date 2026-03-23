@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Northstar Control | Executive Dashboard</title>
+    <meta
+      name="description"
+      content="経営状況、キャッシュ、案件進捗、組織アラートを一画面で把握できるエグゼクティブダッシュボード。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <div class="brand-mark">N</div>
+          <div>
+            <p class="brand-name">Northstar Control</p>
+            <p class="brand-sub">Executive Dashboard</p>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="主要メニュー">
+          <a class="is-active" href="#overview">Overview</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#operations">Operations</a>
+          <a href="#capital">Capital</a>
+          <a href="#risk">Risk</a>
+        </nav>
+
+        <section class="sidebar-panel">
+          <p class="panel-kicker">Current Focus</p>
+          <h2>Q2 実行優先度</h2>
+          <ul class="focus-list">
+            <li>主要案件の粗利維持</li>
+            <li>採用充足率 90% 到達</li>
+            <li>回収サイト 45日以内へ短縮</li>
+          </ul>
+        </section>
+
+        <section class="sidebar-panel subdued">
+          <p class="panel-kicker">System Status</p>
+          <div class="status-row">
+            <span>Data Sync</span>
+            <strong>2 min ago</strong>
+          </div>
+          <div class="status-row">
+            <span>Forecast Confidence</span>
+            <strong>High</strong>
+          </div>
+          <div class="status-row">
+            <span>Open Alerts</span>
+            <strong>04</strong>
+          </div>
+        </section>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <div>
+            <p class="page-eyebrow">Overview</p>
+            <h1>経営状態を、迷わず判断できる密度で。</h1>
+          </div>
+          <div class="topbar-actions">
+            <button class="ghost-button" type="button">Export</button>
+            <button class="solid-button" type="button">Board Summary</button>
+          </div>
+        </header>
+
+        <section class="hero-strip" id="overview">
+          <div class="hero-copy">
+            <p class="hero-label">Today</p>
+            <p class="hero-value">Revenue pace is ahead of plan by 6.4%.</p>
+            <p class="hero-note">
+              主要因はエンタープライズ案件の前倒し着地。一方で採用進捗と回収サイトに注意が必要です。
+            </p>
+          </div>
+          <div class="hero-metrics">
+            <div>
+              <span>Cash runway</span>
+              <strong>19.4 mo</strong>
+            </div>
+            <div>
+              <span>Gross margin</span>
+              <strong>42.8%</strong>
+            </div>
+            <div>
+              <span>Hiring fill</span>
+              <strong>76%</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="metric-grid">
+          <article class="metric-panel">
+            <p class="metric-label">Net Revenue</p>
+            <div class="metric-head">
+              <strong>¥428.6M</strong>
+              <span class="trend positive">+6.4%</span>
+            </div>
+            <p class="metric-sub">Plan ¥402.8M</p>
+            <svg viewBox="0 0 260 88" class="sparkline" aria-hidden="true">
+              <path d="M4 63 C28 66, 34 59, 52 54 S88 38, 104 42 S136 32, 154 28 S192 20, 210 24 S236 17, 256 10" />
+            </svg>
+          </article>
+
+          <article class="metric-panel">
+            <p class="metric-label">Operating Income</p>
+            <div class="metric-head">
+              <strong>¥61.2M</strong>
+              <span class="trend positive">+4.1%</span>
+            </div>
+            <p class="metric-sub">Margin 14.3%</p>
+            <svg viewBox="0 0 260 88" class="sparkline" aria-hidden="true">
+              <path d="M4 70 C24 66, 40 67, 56 62 S94 48, 110 50 S142 40, 158 36 S188 34, 206 29 S236 21, 256 18" />
+            </svg>
+          </article>
+
+          <article class="metric-panel">
+            <p class="metric-label">Receivable Days</p>
+            <div class="metric-head">
+              <strong>48 d</strong>
+              <span class="trend negative">+3 d</span>
+            </div>
+            <p class="metric-sub">Target 45 d</p>
+            <svg viewBox="0 0 260 88" class="sparkline warning" aria-hidden="true">
+              <path d="M4 40 C26 36, 42 33, 56 35 S88 34, 104 42 S144 51, 160 56 S194 60, 210 58 S236 66, 256 72" />
+            </svg>
+          </article>
+
+          <article class="metric-panel">
+            <p class="metric-label">Critical Alerts</p>
+            <div class="metric-head">
+              <strong>04</strong>
+              <span class="trend neutral">review</span>
+            </div>
+            <p class="metric-sub">2 hiring / 1 compliance / 1 delivery</p>
+            <div class="alert-dots" aria-hidden="true">
+              <span class="dot urgent"></span>
+              <span class="dot urgent"></span>
+              <span class="dot mild"></span>
+              <span class="dot mild"></span>
+            </div>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <section class="panel chart-panel" id="portfolio">
+            <div class="panel-head">
+              <div>
+                <p class="panel-kicker">Performance</p>
+                <h2>Revenue vs Plan</h2>
+              </div>
+              <p class="panel-meta">Monthly trend, last 8 months</p>
+            </div>
+
+            <div class="bar-chart" aria-label="Revenue vs Plan chart">
+              <div class="chart-col">
+                <span class="bar actual" style="height: 52%"></span>
+                <span class="bar plan" style="height: 49%"></span>
+                <label>Nov</label>
+              </div>
+              <div class="chart-col">
+                <span class="bar actual" style="height: 58%"></span>
+                <span class="bar plan" style="height: 55%"></span>
+                <label>Dec</label>
+              </div>
+              <div class="chart-col">
+                <span class="bar actual" style="height: 61%"></span>
+                <span class="bar plan" style="height: 59%"></span>
+                <label>Jan</label>
+              </div>
+              <div class="chart-col">
+                <span class="bar actual" style="height: 66%"></span>
+                <span class="bar plan" style="height: 61%"></span>
+                <label>Feb</label>
+              </div>
+              <div class="chart-col">
+                <span class="bar actual" style="height: 74%"></span>
+                <span class="bar plan" style="height: 68%"></span>
+                <label>Mar</label>
+              </div>
+              <div class="chart-col">
+                <span class="bar actual" style="height: 80%"></span>
+                <span class="bar plan" style="height: 73%"></span>
+                <label>Apr</label>
+              </div>
+              <div class="chart-col">
+                <span class="bar actual" style="height: 89%"></span>
+                <span class="bar plan" style="height: 82%"></span>
+                <label>May</label>
+              </div>
+              <div class="chart-col">
+                <span class="bar actual" style="height: 94%"></span>
+                <span class="bar plan" style="height: 88%"></span>
+                <label>Jun</label>
+              </div>
+            </div>
+
+            <div class="chart-legend">
+              <span><i class="legend-chip actual"></i>Actual</span>
+              <span><i class="legend-chip plan"></i>Plan</span>
+            </div>
+          </section>
+
+          <section class="panel" id="risk">
+            <div class="panel-head">
+              <div>
+                <p class="panel-kicker">Risk Watch</p>
+                <h2>Management Alerts</h2>
+              </div>
+              <p class="panel-meta">Requires review this week</p>
+            </div>
+
+            <div class="alert-list">
+              <article class="alert-item">
+                <div>
+                  <p class="alert-title">Senior hiring below threshold</p>
+                  <p class="alert-copy">5 open roles remain beyond 40 days. Delivery capacity risk in July.</p>
+                </div>
+                <span class="alert-badge urgent">High</span>
+              </article>
+              <article class="alert-item">
+                <div>
+                  <p class="alert-title">Collection delay in enterprise accounts</p>
+                  <p class="alert-copy">Receivable days increased from 45 to 48. CFO review scheduled tomorrow.</p>
+                </div>
+                <span class="alert-badge elevated">Mid</span>
+              </article>
+              <article class="alert-item">
+                <div>
+                  <p class="alert-title">Compliance update pending sign-off</p>
+                  <p class="alert-copy">Board materials are ready; legal confirmation missing for one annex.</p>
+                </div>
+                <span class="alert-badge elevated">Mid</span>
+              </article>
+            </div>
+          </section>
+
+          <section class="panel wide-panel" id="operations">
+            <div class="panel-head">
+              <div>
+                <p class="panel-kicker">Execution</p>
+                <h2>Initiative Progress</h2>
+              </div>
+              <p class="panel-meta">Top strategic programs</p>
+            </div>
+
+            <div class="initiative-table" role="table" aria-label="Initiative progress">
+              <div class="table-row table-head" role="row">
+                <span role="columnheader">Initiative</span>
+                <span role="columnheader">Owner</span>
+                <span role="columnheader">Progress</span>
+                <span role="columnheader">Status</span>
+              </div>
+              <div class="table-row" role="row">
+                <span role="cell">Enterprise Pricing Revision</span>
+                <span role="cell">M. Sato</span>
+                <span role="cell"><em style="--progress: 82%"></em>82%</span>
+                <span role="cell" class="status good">On track</span>
+              </div>
+              <div class="table-row" role="row">
+                <span role="cell">Board Reporting Refresh</span>
+                <span role="cell">A. Tanaka</span>
+                <span role="cell"><em style="--progress: 64%"></em>64%</span>
+                <span role="cell" class="status watch">Needs review</span>
+              </div>
+              <div class="table-row" role="row">
+                <span role="cell">Hiring Funnel Optimization</span>
+                <span role="cell">H. Mori</span>
+                <span role="cell"><em style="--progress: 48%"></em>48%</span>
+                <span role="cell" class="status risk">At risk</span>
+              </div>
+              <div class="table-row" role="row">
+                <span role="cell">Collections Process Update</span>
+                <span role="cell">Y. Kudo</span>
+                <span role="cell"><em style="--progress: 71%"></em>71%</span>
+                <span role="cell" class="status watch">Needs review</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" id="capital">
+            <div class="panel-head">
+              <div>
+                <p class="panel-kicker">Capital</p>
+                <h2>Cash Position</h2>
+              </div>
+              <p class="panel-meta">Available liquidity</p>
+            </div>
+
+            <div class="donut-wrap">
+              <div class="donut-chart" aria-hidden="true">
+                <div class="donut-core">
+                  <strong>¥1.42B</strong>
+                  <span>cash + committed line</span>
+                </div>
+              </div>
+              <div class="donut-copy">
+                <p><strong>68%</strong> Operating reserve</p>
+                <p><strong>21%</strong> Strategic allocation</p>
+                <p><strong>11%</strong> Contingency buffer</p>
+              </div>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
